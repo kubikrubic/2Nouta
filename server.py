@@ -2,7 +2,8 @@ import socket
 import threading
 import tkinter as tk
 
-from config import PORT, BUFFER_SIZE, ENCODING, COMMAND_START, COMMAND_STOP, MESSAGE_END
+from config import PORT, BUFFER_SIZE, ENCODING, COMMAND_START, COMMAND_STOP, MESSAGE_END, DISCOVERY_PORT
+from discovery import DiscoveryResponder
 
 
 class ServerApp:
@@ -10,20 +11,31 @@ class ServerApp:
         self.server_socket = None
         self.client_socket = None
         self.running = True
+        self.discovery = DiscoveryResponder()
 
         self.root = tk.Tk()
         self.root.title("Сервер (Ноутбук 1)")
-        self.root.geometry("360x330")
+        self.root.geometry("360x360")
         self.root.protocol("WM_DELETE_WINDOW", self.close)
 
         self.status_label = tk.Label(self.root, text="Запуск сервера...", font=("Arial", 12))
         self.status_label.pack(pady=10)
+
+        self.discovery_label = tk.Label(self.root, text="", font=("Arial", 9), fg="gray")
+        self.discovery_label.pack()
 
         self.canvas = tk.Canvas(self.root, width=300, height=240, bg="white")
         self.canvas.pack(pady=10)
         self.show_text()
 
     def start(self):
+        try:
+            self.discovery.start()
+            discovery_text = f"Поиск: порт {DISCOVERY_PORT}, имя «{self.discovery.name}»"
+        except OSError as error:
+            discovery_text = f"Автопоиск недоступен: {error}"
+        self.discovery_label.config(text=discovery_text)
+
         listen_thread = threading.Thread(target=self.listen_for_clients, daemon=True)
         listen_thread.start()
         self.root.mainloop()
@@ -107,6 +119,7 @@ class ServerApp:
 
     def close(self):
         self.running = False
+        self.discovery.stop()
         self.close_socket(self.client_socket)
         if self.server_socket is not None:
             self.server_socket.close()

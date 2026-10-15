@@ -1,4 +1,3 @@
-SERVER_IP = "127.0.0.1"
 PORT = 55555
 BUFFER_SIZE = 1024
 ENCODING = "utf-8"
@@ -6,3 +5,11 @@ ENCODING = "utf-8"
 COMMAND_START = "START"
 COMMAND_STOP = "STOP"
 MESSAGE_END = "\n"
+
+# Поиск сервера в сети: клиент шлёт DISCOVER на этот порт, сервер отвечает "HERE <имя>"
+DISCOVERY_PORT = 55556
+DISCOVER_REQUEST = "DISCOVER"
+DISCOVER_REPLY = "HERE"
+DISCOVERY_TIMEOUT = 0.3
+SAVED_IP_TIMEOUT = 1.0
+LAST_IP_FILE = "last_ip.txt"
