@@ -3,3 +3,6 @@ __pycache__/
 .vscode/
 .venv/
 last_ip.txt
+build/
+dist/
+*.spec

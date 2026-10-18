@@ -4,6 +4,7 @@ import platform
 import re
 import socket
 import subprocess
+import sys
 import threading
 import time
 from collections import namedtuple
@@ -15,7 +16,11 @@ from config import (BUFFER_SIZE, ENCODING, MESSAGE_END, DISCOVERY_PORT, DISCOVER
 DEFAULT_PREFIX = 24   # если маску узнать не удалось
 MIN_PREFIX = 22       # не сканируем больше 1022 адресов
 MAX_WORKERS = 256
-LAST_IP_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), LAST_IP_FILE)
+# В собранном exe __file__ указывает во временную папку, поэтому храним файл рядом с exe
+APP_DIR = os.path.dirname(sys.executable if getattr(sys, "frozen", False) else os.path.abspath(__file__))
+LAST_IP_PATH = os.path.join(APP_DIR, LAST_IP_FILE)
+# Без этого флага в exe без консоли при вызове ipconfig мелькает чёрное окно
+NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 Device = namedtuple("Device", ["ip", "name", "response_time"])
 
@@ -123,7 +128,8 @@ def find_prefix(ip):
     commands = {"Windows": ["ipconfig"], "Darwin": ["ifconfig"]}
     command = commands.get(platform.system(), ["ip", "-o", "-4", "addr", "show"])
     try:
-        output = subprocess.run(command, capture_output=True, timeout=3).stdout.decode(errors="ignore")
+        output = subprocess.run(command, capture_output=True, timeout=3,
+                                creationflags=NO_WINDOW).stdout.decode(errors="ignore")
     except (OSError, subprocess.SubprocessError):
         return None
 
