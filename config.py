@@ -6,7 +6,6 @@ COMMAND_START = "START"
 COMMAND_STOP = "STOP"
 MESSAGE_END = "\n"
 
-# Поиск сервера в сети: клиент шлёт DISCOVER на этот порт, сервер отвечает "HERE <имя>"
 DISCOVERY_PORT = 55556
 DISCOVER_REQUEST = "DISCOVER"
 DISCOVER_REPLY = "HERE"
