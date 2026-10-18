@@ -12,7 +12,11 @@ import (
 	"time"
 )
 
-const exitCommand = "/exit"
+const (
+	exitCommand     = "/exit"
+	discoverRequest = "NOUTA_DISCOVER"
+	discoverReply   = "NOUTA_HERE"
+)
 
 func main() {
 	port := flag.Int("port", 9000, "TCP-порт сервера")
@@ -72,6 +76,14 @@ func runServer(input *bufio.Reader, port int) {
 		fmt.Printf("  %s:%d\n", ip, port)
 	}
 	fmt.Printf("Введённый текст отправляется всем клиентам. %s — остановить сервер.\n", exitCommand)
+
+	responder, err := net.ListenPacket("udp4", ":"+strconv.Itoa(port))
+	if err != nil {
+		fmt.Println("Автопоиск недоступен:", err)
+	} else {
+		defer responder.Close()
+		go answerDiscovery(responder)
+	}
 
 	var mu sync.Mutex
 	clients := map[net.Conn]bool{}
@@ -140,6 +152,67 @@ func handleClient(conn net.Conn) {
 	fmt.Println("Клиент отключился", address)
 }
 
+// answerDiscovery отвечает клиентам, которые ищут сервер широковещательным запросом.
+func answerDiscovery(conn net.PacketConn) {
+	name, _ := os.Hostname()
+	buffer := make([]byte, 64)
+	for {
+		n, from, err := conn.ReadFrom(buffer)
+		if err != nil {
+			return
+		}
+		if string(buffer[:n]) == discoverRequest {
+			conn.WriteTo([]byte(discoverReply+" "+name), from)
+		}
+	}
+}
+
+// findServer рассылает запрос всем устройствам в локальной сети и возвращает
+// адрес сервера, ответившего первым.
+func findServer(port int) (string, bool) {
+	conn, err := net.ListenPacket("udp4", ":0")
+	if err != nil {
+		return "", false
+	}
+	defer conn.Close()
+
+	// 255.255.255.255 Windows отправляет только через один интерфейс,
+	// поэтому шлём ещё и на broadcast-адрес каждой сети этого компьютера.
+	targets := []net.IP{net.IPv4bcast}
+	addresses, _ := net.InterfaceAddrs()
+	for _, address := range addresses {
+		ipNet, ok := address.(*net.IPNet)
+		if !ok || ipNet.IP.To4() == nil || ipNet.IP.IsLoopback() {
+			continue
+		}
+		ip := ipNet.IP.To4()
+		broadcast := make(net.IP, 4)
+		for i := range ip {
+			broadcast[i] = ip[i] | ^ipNet.Mask[len(ipNet.Mask)-4+i]
+		}
+		targets = append(targets, broadcast)
+	}
+	for _, ip := range targets {
+		conn.WriteTo([]byte(discoverRequest), &net.UDPAddr{IP: ip, Port: port})
+	}
+
+	conn.SetReadDeadline(time.Now().Add(2 * time.Second))
+	buffer := make([]byte, 256)
+	for {
+		n, from, err := conn.ReadFrom(buffer)
+		if err != nil {
+			return "", false
+		}
+		command, name, _ := strings.Cut(string(buffer[:n]), " ")
+		if command != discoverReply {
+			continue
+		}
+		host := from.(*net.UDPAddr).IP.String()
+		fmt.Printf("Найден сервер «%s» (%s)\n", name, host)
+		return net.JoinHostPort(host, strconv.Itoa(port)), true
+	}
+}
+
 func localIPs() []string {
 	var ips []string
 	addresses, _ := net.InterfaceAddrs()
@@ -156,9 +229,14 @@ func localIPs() []string {
 }
 
 func runClient(input *bufio.Reader, port int) {
-	address, ok := askAddress(input, port)
+	fmt.Println("Поиск сервера в локальной сети...")
+	address, ok := findServer(port)
 	if !ok {
-		return
+		fmt.Println("Сервер не найден.")
+		address, ok = askAddress(input, port)
+		if !ok {
+			return
+		}
 	}
 
 	fmt.Println("Подключение к", address, "...")
