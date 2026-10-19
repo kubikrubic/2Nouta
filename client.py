@@ -81,7 +81,6 @@ class ClientApp:
 
         local_ip = get_local_ip()
         if local_ip is None:
-            # Сети нет — проверяем этот же компьютер
             hosts = ["127.0.0.1"]
             text = "Сеть не найдена, проверка этого компьютера..."
         else:

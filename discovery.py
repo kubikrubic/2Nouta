@@ -13,13 +13,11 @@ from concurrent.futures import ThreadPoolExecutor
 from config import (BUFFER_SIZE, ENCODING, MESSAGE_END, DISCOVERY_PORT, DISCOVER_REQUEST, DISCOVER_REPLY,
                     DISCOVERY_TIMEOUT, LAST_IP_FILE)
 
-DEFAULT_PREFIX = 24   # если маску узнать не удалось
-MIN_PREFIX = 22       # не сканируем больше 1022 адресов
+DEFAULT_PREFIX = 24
+MIN_PREFIX = 22
 MAX_WORKERS = 256
-# В собранном exe __file__ указывает во временную папку, поэтому храним файл рядом с exe
 APP_DIR = os.path.dirname(sys.executable if getattr(sys, "frozen", False) else os.path.abspath(__file__))
 LAST_IP_PATH = os.path.join(APP_DIR, LAST_IP_FILE)
-# Без этого флага в exe без консоли при вызове ipconfig мелькает чёрное окно
 NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 Device = namedtuple("Device", ["ip", "name", "response_time"])
@@ -37,7 +35,6 @@ def read_line(sock, limit=256):
 
 
 class DiscoveryResponder:
-    """Отвечает на DISCOVER, чтобы клиент мог найти этот компьютер в сети."""
 
     def __init__(self, name=None):
         self.name = name or socket.gethostname()
@@ -83,7 +80,6 @@ class DiscoveryResponder:
 
 
 def probe(ip, timeout=DISCOVERY_TIMEOUT):
-    """Отправляет DISCOVER на ip. Возвращает Device или None, если ответа HERE нет."""
     started = time.monotonic()
     try:
         with socket.create_connection((ip, DISCOVERY_PORT), timeout=timeout) as sock:
@@ -100,7 +96,6 @@ def probe(ip, timeout=DISCOVERY_TIMEOUT):
 
 
 def scan(hosts, timeout=DISCOVERY_TIMEOUT):
-    """Опрашивает адреса параллельно. Возвращает ответившие устройства, самое быстрое — первым."""
     hosts = [str(host) for host in hosts]
     if not hosts:
         return []
@@ -110,7 +105,6 @@ def scan(hosts, timeout=DISCOVERY_TIMEOUT):
 
 
 def get_local_ip():
-    """IP интерфейса, через который идёт трафик в сеть (обычно Wi-Fi). None — если сети нет."""
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
         try:
             # UDP connect ничего не отправляет, только выбирает интерфейс по таблице маршрутов
@@ -124,7 +118,6 @@ def get_local_ip():
 
 
 def find_prefix(ip):
-    """Ищет длину маски подсети для ip в выводе системной команды. None — если не нашли."""
     commands = {"Windows": ["ipconfig"], "Darwin": ["ifconfig"]}
     command = commands.get(platform.system(), ["ip", "-o", "-4", "addr", "show"])
     try:

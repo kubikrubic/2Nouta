@@ -3,5 +3,6 @@ __pycache__/
 .vscode/
 .venv/
 last_ip.txt
-app-linux
-app-windows.exe
+build/
+dist/
+*.spec
