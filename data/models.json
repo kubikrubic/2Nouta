@@ -1,0 +1,342 @@
+{
+  "fetched": "2026-10-19",
+  "sources": "Характеристики: ru.wikipedia.org (CC BY-SA 4.0). Фото: commons.wikimedia.org.",
+  "models": [
+    {
+      "id": "granta",
+      "name": "Lada Granta",
+      "article": "https://ru.wikipedia.org/wiki/Lada_Granta",
+      "specs": {
+        "years": "2011 — настоящее время",
+        "body": "4-дв. седан (5-мест.); 5-дв. лифтбек (5-мест.); 5-дв. хетчбэк (5-мест.); 5-дв. универсал (5-мест.)",
+        "engine": "ВАЗ-11186 (бензиновый (АИ-95), 1597 см³); ВАЗ-11182 (бензиновый (АИ-92), 1596 см³); ВАЗ-21126 (бензиновый (АИ-95), 1597 см³); ВАЗ-21127 (бензиновый (АИ-95), 1597 см³)",
+        "power": "ВАЗ-11186: 64,2 кВт (87 л. с.), при 5100 об/мин; ВАЗ-11182: 66 кВт (90 л. с.), при 5000 об/мин; ВАЗ-21126: 72,2 кВт (98 л. с.), при 5600 об/мин; ВАЗ-21127: 78,2 кВт (106 л. с.), при 5800 об/мин",
+        "gearbox": "механическая, 5-ступ.; автоматическая, 4-ступ.; роботизированная, 5-ступ.",
+        "drive": "передний, 4×2",
+        "trunk": "480 л (Технические характеристики)"
+      },
+      "photos": [
+        {
+          "file": "1.jpg",
+          "title": "File:Lada Granta 2018 facelift.jpg",
+          "author": "RG72",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Lada_Granta_2018_facelift.jpg"
+        },
+        {
+          "file": "2.jpg",
+          "title": "File:2025 Lada Granta CLUB brown front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Granta_CLUB_brown_front.jpg"
+        },
+        {
+          "file": "3.jpg",
+          "title": "File:2025 Lada Granta CLUB brown rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Granta_CLUB_brown_rear.jpg"
+        },
+        {
+          "file": "4.jpg",
+          "title": "File:2025 Lada Granta CLUB brown side.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Granta_CLUB_brown_side.jpg"
+        },
+        {
+          "file": "5.jpg",
+          "title": "File:2025 Lada Granta CLUB liftback white front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Granta_CLUB_liftback_white_front.jpg"
+        }
+      ]
+    },
+    {
+      "id": "vesta",
+      "name": "Lada Vesta",
+      "article": "https://ru.wikipedia.org/wiki/Lada_Vesta",
+      "specs": {
+        "years": "2015 — настоящее время",
+        "body": "4-дв. седан (5-мест.); 5-дв. универсал (5-мест.)",
+        "engine": "ВАЗ-21129 (бензиновый, 1596 см³); ВАЗ-21179 (бензиновый, 1774 см³); ВАЗ-21180 (бензиновый, 1598 см³); ВАЗ-11182 (бензиновый, 1596 см³)",
+        "power": "ВАЗ-21129: 78 кВт (106 л. с.), при 5800 об/мин; ВАЗ-21179: 90 кВт (122 л. с.), при 6000 об/мин; ВАЗ-21180: 83,11 кВт (113 л. с.), при 5500 об/мин; ВАЗ-11182: 66,2 кВт (90 л. с.), при 5000 об/мин",
+        "gearbox": "роботизированная, 5-ступ.; механическая, 5-ступ.; вариатор",
+        "drive": "передний, 4×2",
+        "trunk": null
+      },
+      "photos": [
+        {
+          "file": "1.jpg",
+          "title": "File:Lada Vesta sedan blue front (cropped).jpg",
+          "author": "Vyacheslav Bukharov",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Lada_Vesta_sedan_blue_front_(cropped).jpg"
+        },
+        {
+          "file": "2.jpg",
+          "title": "File:2025 Lada Vesta SW Techno brown front.jpg",
+          "author": "gleb",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Vesta_SW_Techno_brown_front.jpg"
+        },
+        {
+          "file": "3.jpg",
+          "title": "File:2025 Lada Vesta SW blue rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Vesta_SW_blue_rear.jpg"
+        },
+        {
+          "file": "4.jpg",
+          "title": "File:2020 Lada Vesta Exclusive white side.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2020_Lada_Vesta_Exclusive_white_side.jpg"
+        },
+        {
+          "file": "5.jpg",
+          "title": "File:2025 Lada Vesta SW blue front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Vesta_SW_blue_front.jpg"
+        }
+      ]
+    },
+    {
+      "id": "niva_legend",
+      "name": "Lada Niva Legend",
+      "article": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B8%D0%B2%D0%B0_%28%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%29",
+      "specs": {
+        "years": "1977 — настоящее время",
+        "body": "3-дв. внедорожник (4-мест.); 5-дв. внедорожник (5-мест.) (ВАЗ-2131)",
+        "engine": "ВАЗ-2121 (бензиновый, 1580 см³); ВАЗ-21213 (бензиновый, 1690 см³); ВАЗ-2123 (бензиновый, 1700 см³); ВАЗ-21179 (бензиновый, 1774 см³); ВАЗ-11182 (бензиновый, 1596 см³)",
+        "power": "ВАЗ-2121: 59 кВт (80 л. с.), при 5400 об/мин; ВАЗ-21213: 81 л. с., при 5000 об/мин; ВАЗ-2123: 80 л. с., при 5000 об/мин; ВАЗ-21179: 90 кВт (122 л. с.), при 6000 об/мин; ВАЗ-11182: 66 кВт (90 л. с.), при 5000 об/мин",
+        "gearbox": "механическая, 4-ступ.; механическая, 5-ступ.",
+        "drive": "полный, 4×4",
+        "trunk": null
+      },
+      "photos": [
+        {
+          "file": "1.jpg",
+          "title": "File:2025 Lada Niva Legend Luxe white front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Niva_Legend_Luxe_white_front.jpg"
+        },
+        {
+          "file": "2.jpg",
+          "title": "File:2025 Lada Niva Legend Luxe white rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Niva_Legend_Luxe_white_rear.jpg"
+        },
+        {
+          "file": "3.jpg",
+          "title": "File:Lada Niva Legend LCV refrigerator white side.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:Lada_Niva_Legend_LCV_refrigerator_white_side.jpg"
+        },
+        {
+          "file": "4.jpg",
+          "title": "File:2025 Lada Niva Legend green front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Niva_Legend_green_front.jpg"
+        },
+        {
+          "file": "5.jpg",
+          "title": "File:2025 Lada Niva Legend khaki rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Niva_Legend_khaki_rear.jpg"
+        }
+      ]
+    },
+    {
+      "id": "niva_travel",
+      "name": "Lada Niva Travel",
+      "article": "https://ru.wikipedia.org/wiki/Lada_Niva_Travel",
+      "specs": {
+        "years": "1998—2001 ОПП (Опытно-промышленное производство); 2002 — настоящее время",
+        "body": "5-дв. SUV (5-мест.)",
+        "engine": "ВАЗ-2123 (бензиновый, 1690 см³); Ecotec Z18XE (бензиновый, 1796 см³); ВАЗ-11184 (бензиновый, 1774 см³)",
+        "power": "ВАЗ-2123: 80 л. с., при 5000 об/мин; Ecotec Z18XE: 125 л. с., при 5600 об/мин; ВАЗ-11184: 90 л. с., при 4800 об/мин",
+        "gearbox": "механическая, 5-ступ.",
+        "drive": "полный, 4×4",
+        "trunk": null
+      },
+      "photos": [
+        {
+          "file": "1.jpg",
+          "title": "File:2025 Lada Niva Travel black front1.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Niva_Travel_black_front1.jpg"
+        },
+        {
+          "file": "2.jpg",
+          "title": "File:2025 Lada Niva Travel brown front.jpg",
+          "author": "gleb",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Niva_Travel_brown_front.jpg"
+        },
+        {
+          "file": "3.jpg",
+          "title": "File:2025 Lada Niva Travel black rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Niva_Travel_black_rear.jpg"
+        },
+        {
+          "file": "4.jpg",
+          "title": "File:2023 Lada Niva Travel BLACK white side.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_Lada_Niva_Travel_BLACK_white_side.jpg"
+        },
+        {
+          "file": "5.jpg",
+          "title": "File:2024 Lada Niva Travel KHL front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2024_Lada_Niva_Travel_KHL_front.jpg"
+        }
+      ]
+    },
+    {
+      "id": "largus",
+      "name": "Lada Largus",
+      "article": "https://ru.wikipedia.org/wiki/Lada_Largus",
+      "specs": {
+        "years": "2012—2022; 2023 — настоящее время",
+        "body": "5-дв. универсал (5-мест.); 5-дв. универсал (7-мест.); 5-дв. фургон (2-мест.)",
+        "engine": "K7M (бензиновый, 1598 см³); ВАЗ-11189 (бензиновый, 1596 см³); ВАЗ-11182 (бензиновый, 1596 см³); K4M (бензиновый, 1598 см³); ВАЗ-21129 (бензиновый, 1596 см³)",
+        "power": "K7M: 60 кВт (82 л. с.), при 5500 об/мин; ВАЗ-11189: 64 кВт (87 л. с.), при 5100 об/мин; ВАЗ-11182: 66 кВт (90 л. с.), при 5000 об/мин; K4M: 75 кВт (102 л. с.), при 5750 об/мин; ВАЗ-21129: 78 кВт (106 л. с.), при 5800 об/мин",
+        "gearbox": "5-ступ. МКПП JR5 или JH3; ВАЗ-21809",
+        "drive": "передний, 4×2",
+        "trunk": "Largus R90: Объём багажника у пятиместной версии Largus составляет 560 л, а у семиместного автомобиля он равен всего 135 л."
+      },
+      "photos": [
+        {
+          "file": "1.jpg",
+          "title": "File:2025 Lada Largus Cross blue front.jpg",
+          "author": "Danjer",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Largus_Cross_blue_front.jpg"
+        },
+        {
+          "file": "2.jpg",
+          "title": "File:2024 Lada Largus white rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2024_Lada_Largus_white_rear.jpg"
+        },
+        {
+          "file": "3.jpg",
+          "title": "File:2021 Lada Largus FS045L beige side.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2021_Lada_Largus_FS045L_beige_side.jpg"
+        },
+        {
+          "file": "4.jpg",
+          "title": "File:2025 Lada Largus Cross silver front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Largus_Cross_silver_front.jpg"
+        },
+        {
+          "file": "5.jpg",
+          "title": "File:2022 Lada Largus brown rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2022_Lada_Largus_brown_rear.jpg"
+        }
+      ]
+    },
+    {
+      "id": "iskra",
+      "name": "Lada Iskra",
+      "article": "https://ru.wikipedia.org/wiki/Lada_Iskra",
+      "specs": {
+        "years": "2025 — настоящее время",
+        "body": "4-дв. седан; 5-дв. универсал",
+        "engine": "ВАЗ-11182 (бензиновый (АИ-92), 1596 см³); ВАЗ-21127 (бензиновый (АИ-95), 1597 см³)",
+        "power": "ВАЗ-11182: 66 кВт (90 л. с.), при 5000 об/мин; ВАЗ-21127: 78,2 кВт (106 л. с.), при 5800 об/мин",
+        "gearbox": "5-скор. МКПП; 6-скор. МКПП; CVT",
+        "drive": "передний, 4×2",
+        "trunk": "Lada Iskra Седан: Объем багажного отделения равен 500 литрам (с учетом дополнительных ниш для хранения — до 645 литров)."
+      },
+      "photos": [
+        {
+          "file": "1.jpg",
+          "title": "File:2025 Lada Iskra white front.jpg",
+          "author": "gleb",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Iskra_white_front.jpg"
+        },
+        {
+          "file": "2.jpg",
+          "title": "File:2025 Lada Iskra SW Cross grey front.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Iskra_SW_Cross_grey_front.jpg"
+        },
+        {
+          "file": "3.jpg",
+          "title": "File:2026 Lada Iskra Cross blue rear.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2026_Lada_Iskra_Cross_blue_rear.jpg"
+        },
+        {
+          "file": "4.jpg",
+          "title": "File:2025 Lada Iskra brown side view.jpg",
+          "author": "Throwawayacc222",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Iskra_brown_side_view.jpg"
+        },
+        {
+          "file": "5.jpg",
+          "title": "File:2025 Lada Iskra SW Cross orange front.jpg",
+          "author": "gleb",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Lada_Iskra_SW_Cross_orange_front.jpg"
+        }
+      ]
+    }
+  ]
+}
